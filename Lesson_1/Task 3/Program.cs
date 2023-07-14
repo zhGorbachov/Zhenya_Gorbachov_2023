@@ -23,15 +23,3 @@ for (var i = 0; i < listNumbers.Length; i++)
 }
 
 Console.WriteLine($"Your array after dublicating: {string.Join(", ", listNumbers)}");
-
-// int[] myArray;
-// int indexToInsert = 2;
-// int elementToInsert = 10;
-//
-// Array.Resize(ref myArray, myArray.Length + 1); // increase array length by 1
-// Array.Copy(myArray, indexToInsert, myArray, indexToInsert + 1, myArray.Length - indexToInsert - 1); // shift elements right from the index
-// myArray[indexToInsert] = elementToInsert; // insert element at the index
-//
-// foreach(int num in myArray) {
-//     Console.WriteLine(num);
-// }
