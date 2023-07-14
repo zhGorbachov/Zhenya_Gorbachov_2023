@@ -13,5 +13,8 @@ else if (string1.Length == string2.Length)
 }
 else
 {
-    Console.WriteLine(string2 + string1[0]);
+    foreach (var word in string2.Split(string1[0]))
+    {
+        Console.WriteLine(word);
+    }
 }
