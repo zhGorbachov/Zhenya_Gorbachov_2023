@@ -13,11 +13,11 @@ public class MythService : StoryService, IMythService
             myth.StoryCode = CreateCode(myth.Name);
         }
 
-        Storage.Myths.Add(myth);
+        Storage.MythsAndLegends.Add(myth);
     }
 
     public Story? GetMythByCode(string code)
     {
-        return Storage.Myths.FirstOrDefault(x => x.StoryCode.Equals(code));
+        return Storage.MythsAndLegends.FirstOrDefault(x => x.StoryCode.Equals(code));
     }
 }

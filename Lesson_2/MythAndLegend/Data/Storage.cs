@@ -9,12 +9,9 @@ public static class Storage
     
     public static List<Story> MythsAndLegends = new List<Story>();
 
-    public static List<Myth> Myths = new List<Myth>();
-    public static List<Legend> Legends = new List<Legend>();
-
     static Storage()
     {
-        Myths.Add(new Myth
+        MythsAndLegends.Add(new Myth
         {
             StoryCode = "ELF-O",
             Name = "ELFO",
@@ -23,7 +20,7 @@ public static class Storage
                       "but without bear. Why is he so good, may be because of great decisions."
         });
         
-        Myths.Add(new Myth
+        MythsAndLegends.Add(new Myth
         {
             StoryCode = "F-20",
             Name = "Some Ficus",
@@ -31,7 +28,7 @@ public static class Storage
             Content = "Just a human, or a plant, I don't know"
         });
         
-        Myths.Add(new Myth
+        MythsAndLegends.Add(new Myth
         {
             StoryCode = "MGL",
             Name = "Some machine gun of love",
@@ -39,7 +36,7 @@ public static class Storage
             Content = "The weapon of mass destruction, hits right in the heart"
         });
         
-        Legends.Add(new Legend
+        MythsAndLegends.Add(new Legend
         {
             StoryCode = "CC#D",
             Name = "Clear .Net Dev exists",

@@ -55,7 +55,7 @@ public class Display : IDisplay
                 Content = storyText
             };
             
-            Storage.Legends.Add(story);
+            Storage.MythsAndLegends.Add(story);
         }
         else if (input == "myth")
         {
@@ -73,7 +73,7 @@ public class Display : IDisplay
                 Content = storyText
             };
             
-            Storage.Myths.Add(story);
+            Storage.MythsAndLegends.Add(story);
         }
         else
         {
