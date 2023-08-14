@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Login page";
+    Layout = null;
+}
+
+<form action="/login">
+    <input type="text" name="username"/>
+    <input type="password" name="password"/>
+    <button>Submit</button>
+</form>
+
+@ViewBag.Error
