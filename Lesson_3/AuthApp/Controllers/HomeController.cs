@@ -26,12 +26,6 @@ public class HomeController : Controller
         return View();
     }
 
-    [Route("/home")]
-    public IActionResult Home(User user)
-    {
-        return View(user);
-    }
-
     [Route("/login")]
     public IActionResult CheckUser(User user)
     {
@@ -41,7 +35,13 @@ public class HomeController : Controller
         {
             return RedirectToAction("Index", new { message = "Username or password is incorrect" });
         }
-        return RedirectToAction("Home", checkedUser);
+        
+        else if (checkedUser.IsAdmin)
+        {
+            return View("Index", (object)"Hello Mr Admin!");   
+        }
+        
+        return View("Index", (object)"You are not admin");
     }
 
     public IActionResult Privacy()

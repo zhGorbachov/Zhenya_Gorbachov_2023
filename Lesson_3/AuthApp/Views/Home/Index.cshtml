@@ -8,5 +8,8 @@
     <input type="password" name="password"/>
     <button>Submit</button>
 </form>
-
-@ViewBag.Error
+@if (Model != null)
+{
+    <h1>@Model</h1>
+}
+@ViewBag.Error;
