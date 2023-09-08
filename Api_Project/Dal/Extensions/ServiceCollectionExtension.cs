@@ -1,4 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Dal.Repositories;
+using Dal.Repositories.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,5 +15,13 @@ public static class ServiceCollectionExtension
 
     private static void AddDatabase(this IServiceCollection services)
     {
+    }
+
+    public static void AddRepositories(this IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddScoped<IUserRepository, UserRepository>();
+        serviceCollection.AddScoped<ITestRepository, TestRepository>();
+        serviceCollection.AddScoped<IAnswerRepository, AnswerRepository>();
+        serviceCollection.AddScoped<IQuestionRepository, QuestionRepository>();
     }
 }
