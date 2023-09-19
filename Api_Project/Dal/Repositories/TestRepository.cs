@@ -9,6 +9,16 @@ public class TestRepository : BaseRepository<Test>, ITestRepository
     public TestRepository(AppDbContext dbContext) : base(dbContext)
     {
     }
+    
+    public async Task<Test> GetWithQuestionsAndAnswerAsync(Guid id)
+    {
+        var test = await _dbContext.Tests
+            .Include(x => x.Questions)
+            .ThenInclude(x => x.Answers)
+            .FirstOrDefaultAsync(x => x.Id == id);
+
+        return test;
+    }
 
     public async Task<IEnumerable<Test>> GetTestsByUserIdAsync(Guid userId)
     {

@@ -20,7 +20,7 @@ public abstract class BaseRepository<TEntity> : IBaseRepository<TEntity> where T
 
     public async Task<TEntity?> GetByIdAsync(Guid id)
     {
-        return await _dbContext.Set<TEntity>().FirstOrDefaultAsync(x => x.Id == id);
+        return await _dbContext.Set<TEntity>().FindAsync(id);
     }
 
     public async Task AddAsync(TEntity entity)
